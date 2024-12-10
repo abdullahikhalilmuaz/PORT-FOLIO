@@ -1,0 +1,126 @@
+.portfolio {
+  width: 100%;
+  height: 450px;
+  margin: -10px 0;
+  color: black;
+}
+
+.portfolio p:first-of-type {
+  margin: 20px;
+  color: brown;
+}
+
+.portfolio .header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  height: 30px;
+  justify-content: space-between;
+}
+
+.portfolio .projects {
+  width: 100%;
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-items: center;
+}
+.portfolio .header h2 span {
+  color: brown;
+}
+
+.portfolio .header a {
+  background-color: brown;
+  padding: 20px 20px;
+  font-size: 10px;
+  cursor: pointer;
+  align-items: center;
+  line-height: 0px;
+  border-radius: 20px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 330px;
+  margin: 10px auto;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.267);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.card-wrapper .src {
+  width: 100%;
+  height: 65%;
+  background-color: gray;
+  border-radius: inherit;
+  overflow: auto;
+  transition: 0.2s ease-in-out;
+}
+
+.card-wrapper .src::-webkit-scrollbar {
+  display: none;
+}
+.card-wrapper .src img {
+  width: 100%;
+  height: 80%;
+  transform: rotate(20deg);
+  transition: 0.3s ease-in-out;
+}
+
+.card-wrapper .description {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 35%;
+}
+
+.card-wrapper .src:hover {
+  transform: scale(1.1);
+}
+.description h4 {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.description span {
+  font-size: 12px;
+  color: gray;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  line-height: -10px;
+}
+
+.description a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  background-color: brown;
+  margin-top: 10px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  /*margin-left: 10px;
+  margin-top: 10px; */
+}
+@media only screen and (max-width: 770px) {
+  .portfolio {
+    width: 100%;
+    height: auto;
+    margin: -19.9px 0;
+  }
+  .portfolio .projects {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+  }
+}

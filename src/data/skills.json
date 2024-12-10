@@ -1,0 +1,34 @@
+{
+  "skill": [
+    {
+      "id": 1,
+      "skill": "ReactJs",
+      "description": "Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 1,
+      "skill": "NodeJs",
+      "description": "Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 1,
+      "skill": "ExpressJs",
+      "description": "Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 1,
+      "skill": "Javascript",
+      "description": "Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 1,
+      "skill": "CSS3",
+      "description": "Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet."
+    },
+    {
+      "id": 1,
+      "skill": "HTML5",
+      "description": "Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet."
+    }
+  ]
+}

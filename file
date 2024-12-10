@@ -1,0 +1,88 @@
+i want when ever the update button is clicked it should remove that table from that place and leave only the update component right there and if the form is submitted then it will be removed and the table will be back, and by default the table is showing, and none of the update, detele,create and update component should be showing, here is the code:
+
+
+import React, { useEffect, useState } from "react";
+import Header from "./Header";
+import styles from "./admin.module.css";
+import Side from "./Side";
+import Createbook from "./Createbook";
+import Readbook from "./Readbook";
+import Updatebook from "./Updatebook";
+import Deleteook from "./Deletebook";
+import { useNavigate } from "react-router-dom";
+const url = "http://localhost:5000/api/libBooks";
+export default function Admin() {
+  const [data, setData] = useState([]);
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch(url);
+      const data = await res.json();
+      setData(data);
+    }
+    fetchData();
+  }, []);
+
+  function updatebook() {
+    navigate(<Updatebook />);
+  }
+  return (
+    <div>
+      <Header setSearch={setSearch} />
+      <div className={styles.container}>
+        <Side className={styles.side} />
+        <div className={styles.main}>
+          <div className={styles.header}>
+            <h3>Books</h3>
+            <div className={styles.navigateBooks}>
+              <button onClick={updatebook}>Create</button>
+              <button>Read</button>
+              <button>Update</button>
+              <button>Delete</button>
+            </div>
+          </div>
+          <div className={styles.tablecontent}>
+            <table>
+              <thead>
+                <tr>
+                  <th>Book Id</th>
+                  <th>Book Name</th>
+                  <th>Author</th>
+                  <th>Genre</th>
+                  <th>Pages</th>
+                  <th>status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data
+                  .filter((user) => {
+                    if (search.toLocaleLowerCase() === "") {
+                      return user;
+                    } else {
+                      return user.bookname.toLocaleLowerCase().includes(search);
+                    }
+                  })
+                  .map((books) => (
+                    <tr key={books.id}>
+                      <td>{books.id}</td>
+                      <td>{books.bookname}</td>
+                      <td>{books.Author}</td>
+                      <td>{books.genre}</td>
+                      <td>{books.pages}</td>
+                      <td>{books.available}</td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
+          <Updatebook />
+          <Readbook />
+          <Createbook />
+          <Deleteook />
+        </div>
+      </div>
+      {console.log(search)}
+    </div>
+  );
+}

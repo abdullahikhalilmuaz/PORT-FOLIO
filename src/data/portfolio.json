@@ -1,0 +1,25 @@
+{
+  "portfolio": [
+    {
+      "id": 1,
+      "project": "Library Management System",
+      "src": "/src/images/lending-system.png",
+      "description": "A School Library Management System Built with ReactJs, NodeJs, and Express",
+      "link": "https://github/abdullahihmuaz/FoodOrderingApp.io"
+    },
+    {
+      "id": 2,
+      "project": "Pinterest Clone",
+      "src": "/src/images/lending-system.png",
+      "description": "Pinterest Chat App Cloned with ReactJs, NodeJs, and Express",
+      "link": "https://github/abdullahihmuaz/FoodOrderingApp.io"
+    },
+    {
+      "id": 3,
+      "project": "Food Ordering App",
+      "src": "/src/images/lending-system.png",
+      "description": "A Food Ordering App Built with ReactJs, NodeJs, and Express",
+      "link": "https://github/abdullahihmuaz/FoodOrderingApp.io"
+    }
+  ]
+}
